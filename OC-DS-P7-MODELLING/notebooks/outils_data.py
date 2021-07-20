@@ -79,7 +79,7 @@ def get_types_variables(df_work, types, type_par_var, graph):
 # Afficher des informations sur les valeurs manquantes
 
 
-def get_missing_values(df_work, pourcentage, affiche_heatmap):
+def get_missing_values(df_work, pourcentage, affiche_heatmap, retour=False):
     """Indicateurs sur les variables manquantes
        @param in : df_work dataframe obligatoire
                    pourcentage : boolean si True affiche le nombre heatmap
@@ -117,6 +117,9 @@ def get_missing_values(df_work, pourcentage, affiche_heatmap):
         sns.heatmap(df_work.isna(), cbar=False)
         plt.show()
 
+    if retour:
+        return table
+    
 # --------------------------------------------------------------------
 # -- TRACE DES DIMENSIONS D'UN DATAFRAME
 # --------------------------------------------------------------------
@@ -864,3 +867,4 @@ def lister_fichiers_repertoire(chemin_rep):
         display(str() + ' fichier présent')
 
     return dataframe_fic.style.hide_index()
+
