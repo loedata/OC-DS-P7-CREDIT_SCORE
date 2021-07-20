@@ -867,3 +867,4 @@ def lister_fichiers_repertoire(chemin_rep):
         display(str() + ' fichier présent')
 
     return dataframe_fic.style.hide_index()
+

@@ -469,3 +469,4 @@ def feature_engineering_neighbors_EXT_SOURCE(dataframe):
     # adding the means of targets of 500 neighbors to new column
     dataframe['TARGET_NEIGHBORS_500_MEAN'] = [
         dataframe['TARGET'].iloc[ele].mean() for ele in train_500_neighbors]
+
